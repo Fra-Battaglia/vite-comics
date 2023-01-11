@@ -9,11 +9,11 @@
 </script>
 
 <template>
-	<main>
+	<div class="content">
 		<div class="container">
 			<h1>{{ Message }}</h1>
 		</div>
-	</main>
+	</div>
 
 </template>
 
@@ -22,7 +22,7 @@
 	@use './styles/partials/mixins' as *;
 	@use './styles/partials/variables' as *;
 
-	main {
+	.content {
 		height: 100px;
 		background-color: $dark-color;
 		color: $light-color;

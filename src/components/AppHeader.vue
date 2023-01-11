@@ -53,7 +53,7 @@
 <template>
 	<header>
 		<div class="container">
-			<img src="../assets/img/dc-logo.png" alt="logo dc"/>
+			<a href="#"><img src="../assets/img/dc-logo.png" alt="logo dc"/></a>
 	
 			<ul>
 				<li v-for="(item, index) in menu_voices" :key="index" :class="item.active ? 'active' : ''"><a href="#" class="">{{ item.voice }}</a></li>
@@ -90,11 +90,10 @@
 
 			a {
 				color: $dark-color;
-				text-decoration: none;
 			}
 		}
 
-		li.active {
+		li.active, li:hover {
 			border-bottom-color: $primary-color;
 
 			a {
