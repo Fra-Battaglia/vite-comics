@@ -2,11 +2,13 @@
 	import AppHeader from './components/AppHeader.vue';
 	import AppContent from './components/AppContent.vue';
 	import AppPaneMenu from './components/AppPaneMenu.vue';
+	import AppFooterVue from './components/AppFooter.vue';
 	export default {
 		components: {
 			AppHeader,
 			AppContent,
-			AppPaneMenu
+			AppPaneMenu,
+			AppFooterVue
 		}
 	}
 </script>
@@ -17,6 +19,7 @@
 			<AppContent />
 			<AppPaneMenu />
 		</main>
+		<AppFooterVue />
 </template>
 
 <style lang="scss">
@@ -24,5 +27,5 @@
 	@use './components/styles/partials/mixins' as *;
 	@use './components/styles/partials/variables' as *;
 
-	@import url('./components/styles/generals.scss');
+	@use './components/styles/generals.scss' as *;
 </style>
