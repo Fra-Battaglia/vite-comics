@@ -2,16 +2,19 @@
 	export default {
 		data() {
 			return {
-				// props: 
 			}
+		},
+		props: {
+			thumb: String,
+			series: String,
 		}
 	}
 </script>
 
 <template>
 	<div class="comic-card">
-		<div class="comic-cover"><img src="#" alt="copertina"></div>
-		<div class="comic-title">TITOLO</div>
+		<div class="comic-cover"><img :src="thumb" alt="copertina"></div>
+		<div class="comic-title">{{ series }}</div>
 	</div>
 </template>
 
