@@ -2,13 +2,13 @@
 	import AppHeader from './components/AppHeader.vue';
 	import AppContent from './components/AppContent.vue';
 	import AppPaneMenu from './components/AppPaneMenu.vue';
-	import AppFooterVue from './components/AppFooter.vue';
+	import AppFooter from './components/AppFooter.vue';
 	export default {
 		components: {
 			AppHeader,
 			AppContent,
 			AppPaneMenu,
-			AppFooterVue
+			AppFooter
 		}
 	}
 </script>
@@ -19,7 +19,7 @@
 			<AppContent />
 			<AppPaneMenu />
 		</main>
-		<AppFooterVue />
+		<AppFooter />
 </template>
 
 <style lang="scss">

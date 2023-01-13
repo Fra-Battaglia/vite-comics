@@ -1,17 +1,28 @@
 <script>
+	import ComicData from '../assets/data/dc-comics.json';
+	import AppCard from './AppCard.vue';
 	export default {
 		data() {
 			return {
-				Message: '-->> Content Goes Here <<--'
+				ComicData,
+
 			}
+		},
+
+		components: {
+			AppCard
 		}
 	}
 </script>
 
 <template>
-	<div class="content">
+	<div class="jumbotron"></div>
+
+	<div class="current-series">
 		<div class="container">
-			<h1>{{ Message }}</h1>
+			<div class="comics-list">
+				<AppCard v-for="(item, index) in ComicData" :key="index" :comic="item" />
+			</div>
 		</div>
 	</div>
 
@@ -22,10 +33,19 @@
 	@use './styles/partials/mixins' as *;
 	@use './styles/partials/variables' as *;
 
-	.content {
-		height: 100px;
-		background-color: $dark-color;
+	.jumbotron {
+		height: 400px;
+		background-image: url(../assets/img/jumbotron.jpg);
+		background-size: cover;
+	}
+
+	.current-series {
 		color: $light-color;
-		@include flex-align-items-center;
+		background-color: $dark-color;
+
+		.comics-list {
+			@include flex-space-between;
+			flex-wrap: wrap;
+		}
 	}
 </style>

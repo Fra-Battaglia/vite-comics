@@ -105,7 +105,7 @@
 
 				<div class="social">
 					<h3>FOLLOW US</h3>
-					<img :src="item.icon" :alt="item.social" v-for="(item, index) in Socials" :key="index" />
+					<a href="#" v-for="(item, index) in Socials" :key="index"><img :src="item.icon" :alt="item.social" /></a>
 				</div>
 			</div>
 		</div>
@@ -119,12 +119,13 @@
 	.footer-links {
 		background-image: url(../assets/img/footer-bg.jpg);
 		background-size: cover;
-		height: 400px;
+		height: 300px;
 		.container {
 			background-image: url(../assets/img/dc-logo-bg.png);
 			background-repeat: no-repeat;
 			background-position: right center;
 			height: 100%;
+			padding: 2em 0;
 
 			.link-list {
 				h3 {
