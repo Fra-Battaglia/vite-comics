@@ -23,4 +23,19 @@
 	@use './styles/partials/mixins' as *;
 	@use './styles/partials/variables' as *;
 
+	.comic-card {
+		width: 192px;
+		margin-bottom: 2em;
+	}
+
+	img {
+		width: 100%;
+		height: 192px;
+		object-fit: cover;
+		object-position: top;
+	}
+
+	.comic-title {
+		text-transform: uppercase;
+	}
 </style>
