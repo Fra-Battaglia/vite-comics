@@ -6,54 +6,46 @@
 					{
 						menu_title: 'DC COMIX',
 						menu_links: [
-							{
-								link_title: 'Characters',
-								link_title: 'Comics',
-								link_title: 'Movies',
-								link_title: 'TV',
-								link_title: 'Games',
-								link_title: 'Videos',
-								link_title: 'News'
-							}
+							'Characters',
+							'Comics',
+							'Movies',
+							'TV',
+							'Games',
+							'Videos',
+							'News'
 						]
 					},
 					{
 						menu_title: 'SHOP',
 						menu_links: [
-							{
-								link_title: 'Shop DC',
-								link_title: 'Shop DC Collectibles',
-							}
+							'Shop DC',
+							'Shop DC Collectibles',
 						]
 					},
 					{
 						menu_title: 'DC',
 						menu_links: [
-							{
-								link_title: 'Terms Of Use',
-								link_title: 'Privacy policy (New)',
-								link_title: 'Ad Choices',
-								link_title: 'Advertising',
-								link_title: 'Jobs',
-								link_title: 'Subscriptions',
-								link_title: 'Talent Workshops',
-								link_title: 'CPSC Certificates',
-								link_title: 'Ratings',
-								link_title: 'Shop Help',
-								link_title: 'Contact Us',
-							}
+							'Terms Of Use',
+							'Privacy policy (New)',
+							'Ad Choices',
+							'Advertising',
+							'Jobs',
+							'Subscriptions',
+							'Talent Workshops',
+							'CPSC Certificates',
+							'Ratings',
+							'Shop Help',
+							'Contact Us',
 						]
 					},
 					{
 						menu_title: 'SITES',
 						menu_links: [
-							{
-								link_title: 'DC',
-								link_title: 'MAD Magazine',
-								link_title: 'DC Kids',
-								link_title: 'DC Universe',
-								link_title: 'DC Power Visa',
-							}
+							'DC',
+							'MAD Magazine',
+							'DC Kids',
+							'DC Universe',
+							'DC Power Visa',
 						]
 					},
 				],
@@ -92,8 +84,8 @@
 				<div v-for="(item, index) in Links" :key="index" class="link-list">
 					<h3>{{ item.menu_title }}</h3>
 					<ul>
-						<li v-for="(item2, index2) in Links.menu_links" :key="index2">
-							<a href="#">{{ item2.link_title }}</a>
+						<li v-for="(item2, index2) in item.menu_links" :key="index2">
+							<a href="#">{{ item2 }}</a>
 						</li>
 					</ul>
 				</div>
@@ -119,21 +111,28 @@
 	.footer-links {
 		background-image: url(../assets/img/footer-bg.jpg);
 		background-size: cover;
-		height: 300px;
 		.container {
 			background-image: url(../assets/img/dc-logo-bg.png);
 			background-repeat: no-repeat;
 			background-position: right center;
 			height: 100%;
 			padding: 2em 0;
+			display: flex;
+			gap: 2em;
 
 			.link-list {
 				h3 {
 					color: $light-color;
+					margin-bottom: 0.5em;
 				}
 
 				a {
 					color: $grey-color;
+					line-height: 1.5;
+				}
+
+				a:hover {
+					text-decoration: underline;
 				}
 			}
 		}
